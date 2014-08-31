@@ -302,14 +302,6 @@ function disableDrawing () {
 	
 var colors = ['black', 'red', 'orange', 'yellow', 'green', 'blue', 'indigo'];
 
-for(var i=0, n=colors.length;i<n;i++){
-	var swatch = document.createElement('a');
-	swatch.className = 'swatch';
-	swatch.style.backgroundColor = colors[i];
-	swatch.addEventListener('click',setSwatch);
-	document.getElementById('colors').appendChild(swatch);
-}
-
 function setColor(color){
     context.fillStyle = color;
     context.strokeStyle = color;

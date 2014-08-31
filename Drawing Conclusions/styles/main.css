@@ -35,7 +35,13 @@ body, html {
     margin:0;
     padding:0;
 }
-
+#radiusControls a{
+    border-radius:.3em;
+    margin:0;
+    padding:0;
+    width:23%;
+    height:35px;
+}
 .canvasHolder{
     margin:0;
     padding:0;
@@ -45,79 +51,114 @@ body, html {
     margin:0;
     padding:0;
 }
-#colors{
-width: 98%;
-margin-left: 1%
+#radiusControls{
+    float:left;
+    width:40%;
+    background:rgba(0,0,0,0);
+    border:none;
+    padding:0;
+    margin:0;
 }
-.ui-controlgroup-controls{widith:100%}
+#clock{
+    margin-left:0.5%;
+    width:.85em;
+}
+#clock:hover{
+   background:#f6f6f6;
+}
+
+#colors{
+    float:right;
+    height:35px;
+    width:60%;
+    background:rgba(0,0,0,0);
+    border:none;
+    vertical-align:middle;
+    margin:0,0,0,0;
+    padding:0,0,0,0;
+}
+#colors *{
+    margin:0;
+    padding:0;
+    
+}
+#colors div{
+    width:100%;
+    float:right;
+    margin:0;
+    padding:0;
+}
+#colors a{
+    float:right;
+    display:inline-block;
+    border-radius:.3em;
+    border-width:1px;
+    border-style: solid;
+    border-color: #ddd;
+    height:35px;
+    width: 11.5%;
+    vertical-align:middle;
+    margin:1px;
+    padding:0;
+}
 #black{
     background-color:#000;
-    width: 5%;
-    margin-left: 5%
+
 }
 #black:active{
     background-color:#1d1d1d;
-    width: 5%;
+
 }
 #blue{
     background-color:#0000FF;
-    width: 5%;
-    max-width:20px;
+
 }
 #blue:active{
     background-color:#1d1dFF;
-    width: 5%;
+
 }
 
 #green{
     background-color:#008000;
-    width: 5%;
+
 }
 #green:active{
     background-color:#1d9d1d;
-    width: 5%;
+
 }
 
 #yellow{
     background-color:#FFFF1d;
-    width: 5%;
+
 }
 #yellow:active{
     background-color:#FFFF00;
-    width: 3%;
+
 }
 #orange{
     background-color:#FFA500;
-    width: 3%;
 }
 #orange:active{
     background-color:#FF8800;
-    width: 3%;
 }
 #red{
     background-color:#FF0000;
-    width: 3%;
+
 }
 #red:active{
     background-color:#FF1D1D;
-    width: 3%;
+
 }
 #purple{
     background-color:#800080;
-    width: 3%;
 }
 #purple:active{
     background-color:#9D1D9D;
-    width: 3%;
 }
 
-#subtractRadius{
-    width: 3%;
-}
-#addRadius{
-    width: 3%;
-}
-
-.ui-icon-pencil:after {
-    background-image: url(../img/pencil.svg);
+.active{
+    background-image: url(../images/pencil.svg);
+    background-repeat:no-repeat;
+    background-size:40%,40%;
+    background-position: center;
 }

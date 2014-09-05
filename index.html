@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Drawing Conclusions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="jquery-mobile/js/jquery-2.1.1.min.js" type="text/javascript"></script>
+    <script src="jquery-mobile/js/jquery.mobile-1.4.3.min.js" type="text/javascript"></script>
+    <link href="jquery-mobile/styles/jquery.mobile.structure-1.4.3.min.css" rel="stylesheet" />
+    <link href="jquery-mobile/styles/jquery.mobile.icons-1.4.3.min.css" rel="stylesheet" />
+    <link href="jquery-mobile/styles/jquery.mobile.theme-1.4.3.css" rel="stylesheet" />
+    <link href="styles/main.css" rel="stylesheet" />
+
+    <script src="cordova.js" type="text/javascript"></script>
+
+
+</head>
+  <body>
+        <div data-role="page" id="titlePage">
+            <div data-role="header">
+		<h1>Drawing Conclusions</h1>
+            </div><!-- /header -->
+
+            <div role="main" class="ui-content">
+                    <a href="#howToPlayPage" data-rel="dialog" data-transition="flip" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-icon-left ui-icon-info">How To Play</a>
+                    <a href="#setupPage" data-transition="flip" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-icon-left ui-icon-gear">Set Up</a>
+            </div><!-- /content -->
+
+            <div data-role="footer">
+              <h4>Page Footer</h4>
+            </div><!-- /footer -->
+        </div><!-- /page -->
+
+
+        <div data-role="page" id="howToPlayPage">
+
+            <div data-role="header">
+                <a href="#titlePage" data-transition="flip" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-back">Back</a>
+                <h1>How To Play</h1>
+            </div><!-- /header -->
+
+            <div role="main" class="ui-content">
+                <p>TODO add game description here. </p>
+            </div><!-- /content -->
+
+            <div data-role="footer">
+              <h4>Page Footer</h4>
+            </div><!-- /footer -->
+        </div><!-- /page -->
+
+
+
+        <div data-role="page" id="setupPage" >
+
+            <div data-role="header">
+                <a href="#titlePage" data-transition="flip" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-back">Back</a>
+                <h1>Set Up</h1>
+            </div><!-- /header -->
+
+            <div role="main" class="ui-content">
+                <p>TODO add game description here. </p>
+                <form>
+                    <label for="numberPlayers">Number of Players:</label>
+                    <input type="number" name="number" id="numberPlayers" value="5" min="3" max="30">
+
+                    <label for="sliderTimeLimit">Time Limit:</label>
+                    <input type="range" name="sliderTimeLimit" id="sliderTimeLimit" value="60" min="10" max="150" step="5" data-highlight="true">
+
+                    <a  class="ui-btn ui-shadow ui-btn-icon-left ui-icon-check" onclick="saveSettings()">Okay</a>
+                </form>
+
+
+            </div><!-- /content -->
+
+            <div data-role="footer">
+              <h4>Page Footer</h4>
+            </div><!-- /footer -->
+        </div><!-- /page -->
+
+
+        <div data-role="page" id="initialPhrasePage" >
+
+            <div data-role="header">
+                <h1>Starting Phrase</h1>
+            </div><!-- /header -->
+
+            <div role="main" class="ui-content">
+                <form>
+                    <div class="ui-field-contain">
+                        <label for="initialPhraseInput">Starting Phrase:</label>
+                        <input type="text" name="initialPhraseInput" id="initialPhraseInput">
+                        <a class="ui-btn ui-btn-inline ui-shadow ui-shadow ui-icon-check ui-btn-icon-left" onclick="startGame()">Go</a>
+                    </div>
+                </form>
+
+            </div><!-- /content -->
+
+            <div data-role="footer">
+              <h4>Page Footer</h4>
+            </div><!-- /footer -->
+        </div><!-- /page -->
+
+
+
+        <div data-role="page" id="drawPage" >
+
+            <div data-role="header" id="drawPageHeader" data-position="fixed" data-tap-toggle="false">
+
+
+                <div id="radiusControls" data-type="horizontal"data-inline="true" data-mini="true" class="drawingControls ui-mini ui-btn">
+
+                      <span id="clock" data-inline="true" data-mini="true" class="ui-btn ui-mini ui-corner-all ui-icon-clock ui-btn-icon-left">999</span>
+                    <!-- radius controls -->
+                        <a href="#" id="addRadius" class="ui-btn ui-mini ui-icon-plus ui-btn-icon-notext">No text</a>
+                        <a href="#" id="subtractRadius" class="ui-btn ui-icon-minus ui-mini ui-btn-icon-notext">No text</a>
+                </div></h1></h1>
+                    <div data-role="controlgroup" id="colors" data-type="horizontal" data-mini="true" class="drawingControls ui-mini ui-btn-right">
+                        <a href="" id="black" class="swatch active ui-btn ui-nodisc-icon ui-icon-pencil ui-btn-icon-notext ui-corner-all ">No text</a>
+                        <a href="" id="blue" class="swatch ui-btn ui-nodisc-icon ui-icon-myicon ui-btn-icon-notext ui-corner-all">No text</a>
+                        <a href="" id="green" class="swatch ui-btn ui-nodisc-icon ui-icon-myicon ui-btn-icon-notext ui-corner-all">No text</a>
+                        <a href="" id="yellow" class="swatch ui-btn ui-nodisc-icon ui-icon-myicon ui-btn-icon-notext ui-corner-all">No text</a>
+                        <a href="" id="orange" class="swatch ui-btn ui-nodisc-icon ui-icon-myicon ui-btn-icon-notext ui-corner-all">No text</a>
+                        <a href="" id="red" class="swatch ui-btn ui-nodisc-icon ui-icon-myicon ui-btn-icon-notext ui-corner-all">No text</a>
+                        <a href="" id="purple" class="swatch ui-btn ui-nodisc-icon ui-icon-myicon ui-btn-icon-notext ui-corner-all">No text</a>
+                    </div>
+
+            </div><!-- /header -->
+
+            <div role="main" id="drawingContent" class="ui-content canvasHolder">
+                <canvas id="drawingCanvas">canvas is here</canvas>
+
+            </div><!-- /content -->
+
+            <div data-role="footer" id="drawPageFooter">
+                <input type="text" name="text-1" id="drawPageFooterText" value="">
+            </div><!-- /footer -->
+        </div><!-- /page -->
+
+
+
+        <script src="scripts/main.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        document.addEventListener('deviceready', function () {
+            navigator.splashscreen.hide();
+        }, false);
+    </script>
+</body>
+</html>

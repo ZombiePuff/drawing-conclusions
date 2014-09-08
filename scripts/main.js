@@ -151,7 +151,7 @@ function tick() {
                 guesses[guessPosition] = $( "#drawPageFooterText" ).val();
                 sessionStorage.setItem("guesses",guesses);
   // SILENCE CUZ I WAS GETTING ANNOYED~  audio.play();
-                document.getElementById("clock").innerHTML = "PASS!!!";
+                document.getElementById("clock").innerHTML = "PASS";
                 clearTimeout(myTimer);
                 counter = sessionStorage.getItem("timeLimit");
                 document.getElementById("clock").style.color="black";

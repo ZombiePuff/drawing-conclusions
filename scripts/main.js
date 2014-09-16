@@ -225,8 +225,8 @@ function tick() {
 	var drawPageFooter = document.getElementById("drawPageFooterText");
 	var extraHeight = drawPageHeader.height + drawPageFooter.height;
 
-	canvas.width = $("#drawPage").innerWidth();
-	canvas.height = ($("#drawPage").innerHeight() * 0.88);
+	canvas.width = ($("#drawPage").innerWidth() + 20);
+	canvas.height = ($("#drawPage").innerHeight() - 116);
 	context.lineWidth = radius*2;
 
 
